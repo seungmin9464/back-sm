@@ -1,0 +1,61 @@
+header{
+  width: 100%;
+  height: 100px;
+  padding: 0 40px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: inherit;
+  z-index: 9999;
+
+  & .hdr__logo{
+    width: 106px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.hdr__pc__menu{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: fit-content;
+  height: 100%;
+
+  & a{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray-color02);
+    transition: all .3s;
+    &:hover{
+      background: -webkit-linear-gradient(left,#330867 ,#30CFD0, #330867);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -webkit-animation: dancing-data-v-text 2s ease-in-out infinite forwards;
+      animation: dancing-data-v-text 2s ease-in-out infinite forwards;
+    }
+    &.router-link-active{
+      background: -webkit-linear-gradient(left,#330867 ,#30CFD0, #330867);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -webkit-animation: dancing-data-v-text 2s ease-in-out infinite forwards;
+      animation: dancing-data-v-text 2s ease-in-out infinite forwards;
+    }
+  }
+}
+
+@keyframes dancing-data-v-text {
+  50% {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-position: -60px
+  }
+}
